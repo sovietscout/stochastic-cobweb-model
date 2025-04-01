@@ -2,6 +2,7 @@
 
 This project implements a stochastic cobweb model in Julia, based on Walter Enders’ *Applied Econometric Time Series*. The model illustrates price and quantity dynamics in a market with production lags, focusing on stability, stochastic shocks, and impulse response functions (IRFs).
 
+
 ## Theoretical Background
 
 The cobweb model, often applied to agricultural markets, assumes farmers use naive expectations: the expected price at time $t$ is the previous period’s price $( p_t^* = p_{t-1} )$. The model is defined by:
@@ -26,7 +27,7 @@ This project simulates:
 
 2. Unstable Cases (β/γ = 2.0):
    - A deterministic scenario demonstrating divergence.
-   - A stochastic scenario with supply shocks, showing explosive behavior and the corresponding IRF.
+   - A stochastic scenario with supply shocks, showing explosive behaviour and the corresponding IRF.
 
 
 ## Results
@@ -34,39 +35,31 @@ This project simulates:
 ### Stable Cases $(\beta/\gamma = 0.5)$
 1. **Deterministic Model**: 
    - Prices and quantities converge to the equilibrium.
-
    ![Deterministic Stable Case](images/path-deterministic-stable.png)
 
    - Price-quantity adjustments spiral inward to the equilibrium.
-
    ![Cobweb](images/cobweb-deterministic-0.5.gif)
 
 2. **Stochastic Model**: 
    - Prices fluctuate around the equilibrium with supply shocks $(σ=0.1)$.
-
    ![Stochastic Stable Case](images/path-stochastic-stable.png)
 
    - The IRF shows price responses to a supply shock oscillating and decaying to zero, consistent with $ \beta/\gamma < 1 $.
-
    ![IRF](images/irf-stable.png)
 
 ### Unstable Cases $(\beta/\gamma = 2.0)$
 1. **Deterministic Model**: 
    - Prices diverge/explode due to $|\beta/\gamma| > 1$.
-
    ![Deterministic Unstable Case](images/path-deterministic-unstable.png)
 
    - Price-quantity adjustments spiral outwards away from the equilibrium.
-
    ![Cobweb](images/cobweb-deterministic-2.0.gif)
 
 2. **Stochastic Model**:
-   - Prices diverge rapidly with shocks, as $ \beta/\gamma = 2.0 > 1 $, leading to unsustainable oscillations.
-
+   - Prices diverge rapidly with shocks, as $\beta/\gamma = 2.0 > 1$, leading to unsustainable oscillations.
    ![Stochastic Unstable Case](images/path-stochastic-unstable.png)
 
-   - The IRF shows price responses growing exponentially, reflecting the unstable dynamics of $ \beta/\gamma > 1 $.
-
+   - The IRF shows price responses growing exponentially, reflecting the unstable dynamics of $\beta/\gamma > 1$.
    ![IRF](images/irf-unstable.png)
 
 
