@@ -35,32 +35,40 @@ This project simulates:
 ### Stable Cases $(\beta/\gamma = 0.5)$
 1. **Deterministic Model**: 
    - Prices and quantities converge to the equilibrium.
-   ![Deterministic Stable Case](images/path-deterministic-stable.png)
 
-   - Price-quantity adjustments spiral inward to the equilibrium.
-   ![Cobweb](images/cobweb-deterministic-0.5.gif)
+      ![Deterministic Stable Case](images/path-deterministic-stable.png)
+
+   - Price-quantity adjustments spiral inwards and converge to the equilibrium.
+   
+      ![Cobweb](images/cobweb-deterministic-0.5.gif)
 
 2. **Stochastic Model**: 
    - Prices fluctuate around the equilibrium with supply shocks $(σ=0.1)$.
-   ![Stochastic Stable Case](images/path-stochastic-stable.png)
+   
+      ![Stochastic Stable Case](images/path-stochastic-stable.png)
 
-   - The IRF shows price responses to a supply shock oscillating and decaying to zero, consistent with $ \beta/\gamma < 1 $.
-   ![IRF](images/irf-stable.png)
+   - The IRF shows price responses to a supply shock oscillating and decaying to zero, consistent with $\beta/\gamma < 1$.
+      
+      ![IRF](images/irf-stable.png)
 
 ### Unstable Cases $(\beta/\gamma = 2.0)$
 1. **Deterministic Model**: 
    - Prices diverge/explode due to $|\beta/\gamma| > 1$.
-   ![Deterministic Unstable Case](images/path-deterministic-unstable.png)
+   
+      ![Deterministic Unstable Case](images/path-deterministic-unstable.png)
 
-   - Price-quantity adjustments spiral outwards away from the equilibrium.
-   ![Cobweb](images/cobweb-deterministic-2.0.gif)
+   - Price-quantity adjustments spiral outwards and diverge away from the equilibrium.
+   
+      ![Cobweb](images/cobweb-deterministic-2.0.gif)
 
 2. **Stochastic Model**:
    - Prices diverge rapidly with shocks, as $\beta/\gamma = 2.0 > 1$, leading to unsustainable oscillations.
-   ![Stochastic Unstable Case](images/path-stochastic-unstable.png)
+   
+      ![Stochastic Unstable Case](images/path-stochastic-unstable.png)
 
    - The IRF shows price responses growing exponentially, reflecting the unstable dynamics of $\beta/\gamma > 1$.
-   ![IRF](images/irf-unstable.png)
+      
+      ![IRF](images/irf-unstable.png)
 
 
 ## Citation
